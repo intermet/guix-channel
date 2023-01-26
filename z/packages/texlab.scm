@@ -120,4 +120,4 @@
    (synopsis "Backend for the BibLaTeX citation management tool")
    (description "Biber is a BibTeX replacement for users of biblatex.  Among
 other things it comes with full Unicode support.")
-   (license artistic2.0)))
+   (license license:artistic2.0)))

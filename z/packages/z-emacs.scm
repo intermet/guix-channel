@@ -1,4 +1,4 @@
-(define-module (my-channel)
+(define-module (z packages z-emacs)
   #:use-module (guix packages)
   #:use-module (guix download)
   #:use-module (guix utils)
@@ -9,8 +9,7 @@
   #:use-module (gnu packages image)
   #:use-module (guix build-system gnu)
   #:use-module (guix git-download)
-  #:use-module (guix licenses)
-  #:export (emacs-next-treesitter))
+  #:use-module (guix licenses))
 
 
 (define-public emacs-next-treesitter
@@ -24,5 +23,4 @@
                                            ,flags))))
    
    (inputs (modify-inputs (package-inputs emacs-next)
-                          (prepend tree-sitter))))
-  )
+                          (prepend tree-sitter)))))

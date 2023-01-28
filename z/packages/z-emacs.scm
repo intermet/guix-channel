@@ -16,11 +16,10 @@
   (package
    (inherit emacs-next)
    (name "emacs-next-treesitter")
-   (arguments
-    (substitute-keyword-arguments (package-arguments emacs)
-                                  ((#:configure-flags flags ''())
-                                   `(cons* "--with-tree-sitter"
-                                           ,flags))))
-   
+   ;; (arguments
+   ;;  (substitute-keyword-arguments (package-arguments emacs)
+   ;;                                ((#:configure-flags flags ''())
+   ;;                                 `(cons* "--with-tree-sitter"
+   ;;                                         ,flags))))
    (inputs (modify-inputs (package-inputs emacs-next)
                           (prepend tree-sitter)))))
